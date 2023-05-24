@@ -4,7 +4,7 @@ import Logo from "../../assets/Group 1.png";
 
 export default function Header(props) {
   return (
-    <div className="p-4 border-b mb-4 bg-white flex items-center justify-between">
+    <div className="p-4 border-b mb-4 bg-white flex items-center justify-between sticky top-0 z-50">
       <div className="flex">
         <Link to="/">
           <img className="mr-4 rounded-full mb-0 w-11" src={Logo} />

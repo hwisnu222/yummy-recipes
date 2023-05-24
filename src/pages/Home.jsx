@@ -28,7 +28,7 @@ export default function Home() {
         className="w-full flex flex-col justify-center items-center"
       >
         <TextInput
-          placeholder="Search recipes"
+          placeholder="Search: Egg, Tomato,etc.."
           onChange={onChange}
           className="w-full"
         />
