@@ -63,7 +63,7 @@ export default function Recipes() {
       <div className="px-2 py-6">
         {category_food.map((category, index) => (
           <div
-            className="inline-block bg-green-800 text-white py-2 px-4 mr-2 rounded-full cursor-pointer"
+            className="inline-block bg-green-800 text-white py-2 px-4 mr-2 mb-2 rounded-full cursor-pointer"
             key={`category-${index}`}
             onClick={() => searchCategory(category)}
           >
