@@ -9,6 +9,17 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { GET_MEAL_BY_SEARCH } from "../services/meat";
 import Meal from "../components/cards/Meal";
 
+const category_food = [
+  "Tomato",
+  "Egg",
+  "Cheese",
+  "Butter",
+  "Chicken",
+  "Cookies",
+  "Pudding",
+  "Soup",
+];
+
 export default function Recipes() {
   const [query, setQuery] = useSearchParams();
   const querySerc = query.get("s");
@@ -29,6 +40,11 @@ export default function Recipes() {
     refetch();
   };
 
+  const searchCategory = (category) => {
+    setSearch(category);
+    refetch();
+  };
+
   React.useEffect(() => {
     refetch();
   }, []);
@@ -44,6 +60,17 @@ export default function Recipes() {
           />
         </form>
       </Header>
+      <div className="px-2 py-6">
+        {category_food.map((category, index) => (
+          <div
+            className="inline-block bg-green-800 text-white py-2 px-4 mr-2 rounded-full cursor-pointer"
+            key={`category-${index}`}
+            onClick={() => searchCategory(category)}
+          >
+            {category}
+          </div>
+        ))}
+      </div>
       <ResponsiveMasonry>
         <Masonry gutter={16}>
           {meals?.map((meal, index) => (
@@ -51,6 +78,9 @@ export default function Recipes() {
           ))}
         </Masonry>
       </ResponsiveMasonry>
+      <footer className="p-4 text-center mt-24 text-green-800 text-sm">
+        &copy; Copyright Yummy Recipes {new Date().getFullYear()}
+      </footer>
     </div>
   );
 }

@@ -27,11 +27,16 @@ export default function Home() {
         onSubmit={onSubmit}
         className="w-full flex flex-col justify-center items-center"
       >
-        <TextInput
-          placeholder="Search: Egg, Tomato,etc.."
-          onChange={onChange}
-          className="w-full"
-        />
+        <div className="flex bg-gray-200 rounded-full">
+          <TextInput
+            placeholder="Search: Egg, Tomato,etc.."
+            onChange={onChange}
+            className="w-full"
+          />
+          <button className="bg-green-800 text-white rounded-full p-2 ml-2">
+            Search
+          </button>
+        </div>
       </form>
     </div>
   );

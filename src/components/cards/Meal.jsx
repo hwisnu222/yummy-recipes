@@ -11,11 +11,9 @@ export default function Meal({ meal }) {
         <img src={meal.strMealThumb} alt="thumbnail" className="rounded-lg" />
       </div>
       <div className="p-4">
-        <h3 className="text-xl text-green-800 font-bold mb-10">
-          {meal.strMeal}
-        </h3>
+        <h3 className="text-xl text-green-800 font-bold">{meal.strMeal}</h3>
         {meal?.strTags && (
-          <div className="text-sm">
+          <div className="text-sm mt-10">
             <span>Tags:</span>
             <div className="mt-2">
               {meal.strTags.split(",").map((tag, index) => (

@@ -10,5 +10,6 @@ export default defineConfig({
     setupFiles: ["./tests/setup.js"],
     testMatch: ["./tests/**/*.test.js"],
     globals: true,
+    mockReset: true,
   },
 });

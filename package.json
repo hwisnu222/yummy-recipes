@@ -8,7 +8,10 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test:update-snapshot": "vitest -u",
+    "test:coverage": "vitest --coverage",
+    "test:ui": "vitest watch --ui --threads false"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -25,6 +28,8 @@
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
+    "@vitest/coverage-c8": "^0.31.2",
+    "@vitest/ui": "^0.31.4",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
